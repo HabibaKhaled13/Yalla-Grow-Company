@@ -1,0 +1,9 @@
+.img{
+    background-image: url(../../../public/imgs/blogs7.jpg);
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+    height: 100vh;
+}
