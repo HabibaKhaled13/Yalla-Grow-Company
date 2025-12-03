@@ -20,31 +20,30 @@ export default function Loading() {
       backgroundColor: "#0F1014",
     })
 
-    // يبدأ اللوجو بـ fade + scale بسيط
     tl.fromTo(
       logo,
       { opacity: 0, scale: 0.85 },
       { opacity: 1, scale: 1, duration: 0.8 }
     )
 
-    // مباشرة بعد ظهوره يبدأ fade out
+
     tl.to(
       logo,
       { opacity: 0, scale: 0.95, duration: 0.8 },
-      "-=0.3" // يبدأ قبل نهاية الظهور بشوية
+      "-=0.3"
     )
 
-    // الدايرة تتقفل بسرعة مع fade out اللوجو
+  
     tl.to(
       loader,
       {
         clipPath: "circle(0% at 50% 50%)",
         duration: 1,
       },
-      "-=0.6" // يبدأ مع بداية اختفاء اللوجو
+      "-=0.6" 
     )
 
-    // يخفي العنصر من DOM بعد الانتهاء
+
     tl.set(loader, { display: "none" })
   }, [])
 
